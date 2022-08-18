@@ -13,7 +13,7 @@ following its continued development. - @dupski
 ## Installation
 
 ```
-npm install json-to-graphql-query
+npm install @sage/json-to-graphql-query
 ```
 
 ## Usage
@@ -48,7 +48,7 @@ See the [CHANGELOG](CHANGELOG.md)
 ### Simple Query
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -77,7 +77,7 @@ query {
 ### Query with arguments
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -110,7 +110,7 @@ query {
 ### Query with nested objects
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -147,7 +147,7 @@ query {
 ### Query with disabled fields
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -185,7 +185,7 @@ by setting the `includeFalsyKeys` option.
 ### Using aliases
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -219,7 +219,7 @@ query {
 ### Query with Enum Values
 
 ```typescript
-import { jsonToGraphQLQuery, EnumType } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery, EnumType } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -250,7 +250,7 @@ query {
 ### Query with variables
 
 ```typescript
-import { jsonToGraphQLQuery, VariableType } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery, VariableType } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -285,7 +285,7 @@ query ($variable1: String!, $variableWithDefault: String = "default_value") {
 ### Query with Directives
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -316,11 +316,11 @@ query {
 
 ### Ignoring fields in the query object
 
-We sometimes want to ignore specific fields in the initial object, for instance __typename in Apollo queries.
+We sometimes want to ignore specific fields in the initial object, for instance, __typename in Apollo queries.
 You can specify these fields using the `ignoreFields` option:
 
 ```typescript
-import { jsonToGraphQLQuery, VariableType } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery, VariableType } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -357,7 +357,7 @@ query {
 Full inline fragments
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -388,7 +388,7 @@ query {
 Partial inline fragments
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
@@ -420,7 +420,7 @@ query {
 ### Query with multiple Inline Fragments
 
 ```typescript
-import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery } from '@sage/json-to-graphql-query';
 
 const query = {
             query: {
@@ -458,7 +458,7 @@ query {
 ### Query with name
 
 ```typescript
-import { jsonToGraphQLQuery, VariableType } from 'json-to-graphql-query';
+import { jsonToGraphQLQuery, VariableType } from '@sage/json-to-graphql-query';
 
 const query = {
     query: {
