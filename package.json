@@ -5,14 +5,18 @@
     "license": "MIT",
     "scripts": {
         "build": "tslint -p . && rm -rf lib/ && tsc",
+        "lint": "tslint -p .",
         "test": "mocha -r ts-node/register --recursive \"./src/**/__tests__/*\"",
         "test-watch": "mocha -r ts-node/register --recursive \"./src/**/__tests__/*\" --watch --watch-extensions ts,tsx",
         "prepare": "npm run build && npm run test"
     },
     "typings": "lib/index.d.ts",
+    "publishConfig": {
+        "registry": "https://repository.sagex3.com:8443/repository/x3-group-repository"
+    },
     "repository": {
         "type": "git",
-        "url": "https://github.com/vkolgi/json-to-graphql-query.git"
+        "url": "git://github.com/Sage-ERP-X3/json-to-graphql-query.git"
     },
     "devDependencies": {
         "@types/chai": "4.3.0",
