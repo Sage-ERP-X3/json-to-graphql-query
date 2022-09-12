@@ -28,4 +28,19 @@ describe('jsonToGraphQLQuery() - aliases', () => {
         );
     });
 
+    it('supports aliases on primitive types', () => {
+        const query = {
+            query: {
+                lorem: {
+                    __aliasFor: 'ipsum',
+                    __value: true,
+                },
+                dolor: true,
+                sit: { amet: { __aliasFor: 'consectetur', __value: true } }
+            }
+        };
+        expect(jsonToGraphQLQuery(query)).to.equal(
+            'query { lorem: ipsum dolor sit { amet: consectetur } }'
+        );
+    });
 });

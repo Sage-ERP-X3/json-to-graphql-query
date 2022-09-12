@@ -176,4 +176,19 @@ describe('jsonToGraphQLQuery() - arguments', () => {
         );
     });
 
+    it('supports arguments on primitive types', () => {
+        const query = {
+            query: {
+                lorem: {
+                    __args: { filter: 'test' },
+                    __value: true,
+                },
+                dolor: true,
+                sit: { amet: { __aliasFor: 'consectetur', __args: { orderBy: 'adipiscing' }, __value: true } }
+            }
+        };
+        expect(jsonToGraphQLQuery(query)).to.equal(
+            'query { lorem (filter: "test") dolor sit { amet: consectetur (orderBy: "adipiscing") } }'
+        );
+    });
 });
